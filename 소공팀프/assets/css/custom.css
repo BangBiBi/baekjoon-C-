@@ -1,0 +1,87 @@
+.calendar-container {
+    height: calc(100vh - 120px); /* 뷰포트 높이에서 헤더/패딩 공간 제외 */
+    margin-top: -50px;
+    margin-bottom: -50px;
+    overflow-y: auto; /* 세로 스크롤 활성화 */
+    background: white; /* 배경색 지정 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* 그림자 효과 */
+  }
+
+  /* 날짜 숫자 스타일 초기화 */
+  .fc-daygrid-day-number {
+    color: inherit !important; /* 기본 텍스트 색상 사용 */
+    text-decoration: none !important; /* 밑줄 제거 */
+  }
+
+  .fc-col-header-cell-cushion {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  .holiday-event {
+    font-size: 0.6em !important; /* 글씨 크기를 60%로 축소 */
+  } 
+
+
+
+  /* 반응형 디자인 영역 */
+  @media screen and (max-width: 768px) {
+    /* 툴바 버튼 컨테이너 */
+    .fc-header-toolbar {
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0.5rem;
+    }
+
+    /* 툴바 섹션 정렬 */
+    .fc-toolbar-chunk {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      gap: 0.3rem;
+    }
+
+    /* 버튼 스타일링 */
+    .fc-button {
+      padding: 0.3rem 0.5rem !important;
+      font-size: 0.9rem !important;
+    }
+
+    /* 타이틀 크기 조정 */
+    .fc-toolbar-title {
+      font-size: 1.2rem !important;
+    }
+
+    /* 버튼 그룹 간격 조정 */
+    .fc-button-group {
+      gap: 0.2rem;
+    }
+  }
+
+  /* 더 작은 화면용 추가 조정 */
+  @media screen and (max-width: 480px) {
+    .fc-header-toolbar {
+      gap: 0.3rem;
+    }
+
+    .fc-button {
+      padding: 0.2rem 0.4rem !important;
+      font-size: 0.8rem !important;
+    }
+
+    .fc-toolbar-title {
+      font-size: 1rem !important;
+    }
+
+    /* 버튼 텍스트 축약 */
+    .fc-today-button {
+      font-size: 0.8rem !important;
+    }
+
+    /* 뷰 전환 버튼 정렬 */
+    .fc-toolbar-chunk:last-child {
+      flex-wrap: wrap;
+    }
+  }
+  /* 반응형 디자인 영역 */
